@@ -15,9 +15,8 @@ provider "azurerm" {
   subscription_id            = var.subscription_id
 }
 
-resource "azurerm_resource_group" "secure_storage_account_resource_group" {
-  name     = var.resource_group_name
-  location = var.resource_group_location
+data "azurerm_resource_group" "secure_storage_account_resource_group" {
+  name = var.resource_group_name
 }
 
 resource "azurerm_storage_account" "secure" {
