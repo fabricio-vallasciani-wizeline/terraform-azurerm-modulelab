@@ -1,6 +1,6 @@
 provider "azurerm" {
-	features {}
-	skip_provider_registration = true
+  features {}
+  skip_provider_registration = true
 }
 
 resource "azurerm_resource_group" "secure_storage_account_resource_group" {
