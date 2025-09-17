@@ -21,8 +21,8 @@ data "azurerm_resource_group" "secure_storage_account_resource_group" {
 
 resource "azurerm_storage_account" "secure" {
   name                          = var.storage_account_name
-  location                      = azurerm_resource_group.secure_storage_account_resource_group.location
-  resource_group_name           = azurerm_resource_group.secure_storage_account_resource_group.name
+  location                      = data.azurerm_resource_group.secure_storage_account_resource_group.location
+  resource_group_name           = data.azurerm_resource_group.secure_storage_account_resource_group.name
   account_replication_type      = var.environment == "Production" ? "GRS" : "LRS"
   account_tier                  = "Standard"
   public_network_access_enabled = false
