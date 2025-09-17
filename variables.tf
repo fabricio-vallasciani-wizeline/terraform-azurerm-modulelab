@@ -15,5 +15,7 @@ variable "environment" {
 }
 
 locals {
-  environment = var.environment
+  tags = {
+    "Environment" = var.environment
+  }
 }
