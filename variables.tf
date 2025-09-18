@@ -3,7 +3,7 @@ variable "subscription_id" {
 }
 
 variable "storage_account_name" {
-  default = "secStgAcc123"
+  default = "secstgacc123"
 }
 
 variable "environment" {
