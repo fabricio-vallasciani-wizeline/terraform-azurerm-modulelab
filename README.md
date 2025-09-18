@@ -9,11 +9,10 @@ Run terraform login + enter
 Generate token on website and use it
 
 How to use it in your terraform configuration
-module "anymodulename" {
-  source               = "app.terraform.io/fabricio_vallasciani_wizeline_org/module/fabri"
-  version              = "1.0.0"
-  subscription_id      = "fromAzure"
-  resource_group_name  = "fromazure"
-  storage_account_name = "staccn12"
+module "module" {
+  source              = "app.terraform.io/fabricio_vallasciani_wizeline_org/module/fabri"
+  version             = "5.0.0"
+  subscription_id     = "fromAzureLogin"
+  resource_group_name = "fromAzurePortal"
 }
 
