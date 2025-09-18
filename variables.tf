@@ -10,6 +10,10 @@ variable "environment" {
   default = "dev"
 }
 
+variable "resource_group_name" {
+  default = ""
+}
+
 locals {
   tags = {
     "Environment" = var.environment
